@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="description"
+    content="HTML5 examples demonstrating external links, navigation, and internal page links."
+  >
+  <title>HTML5 Links and Anchors</title>
+</head>
+
+<body>
+
+  <header id="top">
+    <h1>HTML5 Links and Anchors</h1>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#external-links">External Links</a></li>
+        <li><a href="#internal-links">Internal Links</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="external-links">
+      <h2>External Links</h2>
+
+      <p>
+        Visit
+        <a href="https://www.google.com">Google</a>
+        to search the web.
+      </p>
+
+      <p>
+        Visit
+        <a
+          href="https://developer.mozilla.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MDN Web Docs
+        </a>
+        in a new browsing context.
+      </p>
+    </section>
+
+    <section id="internal-links">
+      <h2>Internal Page Links</h2>
+
+      <p>
+        Use a fragment identifier to move to a specific section of the
+        current page.
+      </p>
+
+      <p>
+        <a href="#contact">Go to the Contact section</a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <p>
+        <a href="tel:+15551234567">Call us</a>
+      </p>
+
+      <p>
+        <a href="mailto:info@example.com">Email us</a>
+      </p>
+    </section>
+
+    <p>
+      <a href="#top">Back to top</a>
+    </p>
+
+  </main>
+
+  <footer>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="#top">Back to top</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2026 Frontend Training Portfolio</p>
+  </footer>
+
+</body>
+</html>
