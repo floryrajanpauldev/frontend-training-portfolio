@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="description"
+    content="HTML fieldset and legend form examples."
+  >
+  <title>Fieldset and Legend</title>
+</head>
+
+<body>
+
+  <main>
+    <h1>Fieldset and Legend</h1>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <div>
+          <label for="full-name">Full Name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="fullName"
+          >
+        </div>
+
+        <br>
+
+        <div>
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+          >
+        </div>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+
+        <div>
+          <input
+            type="radio"
+            id="contact-email"
+            name="contactMethod"
+            value="email"
+          >
+          <label for="contact-email">Email</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="contact-phone"
+            name="contactMethod"
+            value="phone"
+          >
+          <label for="contact-phone">Phone</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="contact-text"
+            name="contactMethod"
+            value="text"
+          >
+          <label for="contact-text">Text Message</label>
+        </div>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Interests</legend>
+
+        <div>
+          <input
+            type="checkbox"
+            id="interest-html"
+            name="interests"
+            value="html"
+          >
+          <label for="interest-html">HTML</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="interest-css"
+            name="interests"
+            value="css"
+          >
+          <label for="interest-css">CSS</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="interest-react"
+            name="interests"
+            value="react"
+          >
+          <label for="interest-react">React</label>
+        </div>
+      </fieldset>
+
+      <br>
+
+      <button type="submit">Submit</button>
+
+    </form>
+  </main>
+
+</body>
+</html>

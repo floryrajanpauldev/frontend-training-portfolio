@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="description"
+    content="HTML select and textarea form control examples."
+  >
+  <title>Select and Textarea</title>
+</head>
+
+<body>
+
+  <main>
+    <h1>Select and Textarea</h1>
+
+    <form action="#" method="post">
+
+      <div>
+        <label for="payment-source">Payment Source</label>
+
+        <select id="payment-source" name="paymentSource">
+          <option value="">-- Select an option --</option>
+          <option value="checking">Checking Account</option>
+          <option value="savings">Savings Account</option>
+          <option value="credit-card">Credit Card</option>
+        </select>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="interests">Choose Your Interests</label>
+
+        <select
+          id="interests"
+          name="interests"
+          multiple
+          size="3"
+        >
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+          <option value="react">React</option>
+        </select>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="comments">Comments</label>
+
+        <textarea
+          id="comments"
+          name="comments"
+          rows="5"
+          cols="40"
+          minlength="10"
+          maxlength="250"
+          placeholder="Enter your comments"
+        ></textarea>
+      </div>
+
+      <br>
+
+      <button type="submit">Submit</button>
+
+    </form>
+
+  </main>
+
+</body>
+</html>
