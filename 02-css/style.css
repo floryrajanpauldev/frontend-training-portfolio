@@ -1,0 +1,187 @@
+  /* your universal selector */
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* element selector */
+h1{
+    color: blue;
+    font-size: 16px;
+    background: none;
+    border: 1px solid #ccc;
+}
+
+/* class selector */
+
+.highlight{
+    color: #0baa02;
+    font-size: 12px;
+}
+
+/* ID selector */
+#main-header {
+  background-color: bisque;
+  padding: 20px;
+  color:brown;
+}
+
+/* descendant selector */
+.container span {
+  background-color: #aa025c;
+  color: #ffffff;
+}
+
+/* child selector */
+.container span > b{
+    color: red;
+}
+
+/* sibling selectors */
+
+/* General sibling selector */
+/* Selects all li elements after .red */
+li.red ~ li {
+  background-color: #f5d0d0;
+}
+
+/* Adjacent sibling selector */
+/* Selects only the li immediately after .red */
+li.red + li {
+  border: 2px solid red;
+}
+
+
+/* pseudo-classes */
+
+/* Mouse hover */
+nav a:hover {
+  color: green;
+}
+
+/* Element is being activated/clicked */
+nav a:active {
+  color: orange;
+}
+
+/* Keyboard focus */
+input:focus {
+  outline: 2px solid #999;
+  outline-offset: 2px;
+}
+
+/* Required input */
+input:required {
+  border: 1px solid red;
+}
+
+/* Disabled input */
+input:disabled {
+  background-color: #eee;
+}
+
+/* Checked checkbox */
+input:checked {
+  accent-color: green;
+}
+
+/* First child */
+.sibling-list li:first-child {
+  border-top: 1px solid #ccc;
+}
+
+/* Last child */
+.sibling-list li:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Third child */
+.sibling-list li:nth-child(3) {
+  font-weight: bold;
+}
+
+/* Select everything except the Home item */
+.sibling-list li:not(.red) {
+  /* style here if needed */
+}
+
+
+/* pseudo-elements */
+
+/* Content before the heading */
+#selectors h2::before {
+  content: "★ ";
+}
+
+/* Content after the heading */
+#selectors h2::after {
+  content: " ✓";
+}
+
+
+/* attribute selectors */
+
+/* Text input */
+input[type="text"] {
+  padding: 8px;
+}
+
+/* Email input */
+input[type="email"] {
+  padding: 8px;
+}
+
+/* Required fields */
+input[required] {
+  background-color: #fff8f8;
+}
+
+
+/* box model */
+
+.container {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+
+/* display */
+
+/* Block */
+.container span {
+  display: inline;
+}
+
+/* Inline-block */
+.sibling-list li {
+  display: inline-block;
+  padding: 20px;
+}
+
+/* Hide an element */
+.nested {
+  /* display: none; */
+}
+
+
+/* border */
+
+.container {
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+/* Individual borders */
+.sibling-list li:first-child {
+  border-top: 1px solid #ccc;
+}
+
+.sibling-list li:last-child {
+  border-bottom: 1px solid #ccc;
+}
