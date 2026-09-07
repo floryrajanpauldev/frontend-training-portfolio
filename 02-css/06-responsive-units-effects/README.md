@@ -414,6 +414,14 @@ users who prefer reduced motion.
 A production application can respect the user's operating
 system preference:
 
+## prefers-reduced-motion
+
+Some users may prefer less animation or movement because of
+accessibility needs.
+
+CSS provides the `prefers-reduced-motion` media query to detect
+this preference.
+
 ```css
 @media (prefers-reduced-motion: reduce) {
 
