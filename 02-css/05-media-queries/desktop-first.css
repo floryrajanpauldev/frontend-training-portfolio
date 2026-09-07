@@ -1,0 +1,204 @@
+
+/* =========================================
+   MEDIA QUERIES
+   DESKTOP-FIRST APPROACH
+   ========================================= */
+
+
+/* Universal selector */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   BASE STYLES - DESKTOP
+   ========================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+
+/* Desktop container */
+
+.container {
+  width: 100%;
+  max-width: 1536px;
+
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  border: 1px solid #ccc;
+}
+
+
+/* =========================================
+   HEADER - DESKTOP
+   ========================================= */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #222;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header button {
+  padding: 8px 16px;
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+main {
+  padding-top: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   1536px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 1536px) {
+
+  .container {
+    max-width: 1280px;
+  }
+
+}
+
+
+/* =========================================
+   1280px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 1280px) {
+
+  .container {
+    max-width: 1024px;
+  }
+
+}
+
+
+/* =========================================
+   1024px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 1024px) {
+
+  .container {
+    max-width: 768px;
+  }
+
+}
+
+
+/* =========================================
+   768px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    max-width: 640px;
+  }
+
+  header {
+    display: block;
+    text-align: center;
+  }
+
+  nav {
+    margin: 15px 0;
+  }
+
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+
+}
+
+
+/* =========================================
+   640px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 640px) {
+
+  .container {
+    max-width: 475px;
+    padding: 0.75rem;
+  }
+
+}
+
+
+/* =========================================
+   500px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 500px) {
+
+
+    .container{
+
+        max-width: 100%;
+    }
+  section h2 {
+    color: red;
+  }
+
+}
+
+
+/* =========================================
+   PRINT
+   ========================================= */
+
+@media print {
+
+  header,
+  footer {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+  }
+
+}
