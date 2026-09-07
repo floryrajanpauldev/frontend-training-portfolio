@@ -1,0 +1,380 @@
+
+/* =========================================
+   RESPONSIVE UNITS & CSS EFFECTS
+   ========================================= */
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   BASE STYLES
+   ========================================= */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.page-header,
+.page-footer {
+  padding: 2rem;
+
+  text-align: center;
+
+  background-color: #222;
+  color: white;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.container {
+  width: min(90%, 1200px);
+
+  margin: 0 auto 2rem;
+  padding: 2rem;
+
+  background-color: white;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.container h2 {
+  margin-bottom: 1.5rem;
+}
+
+
+/* =========================================
+   RESPONSIVE UNITS
+   ========================================= */
+
+
+/* % */
+
+.percent-box {
+  width: 75%;
+
+  padding: 1rem;
+
+  background-color: #e8f5e9;
+}
+
+
+/* REM */
+
+.rem-box {
+  width: 20rem;
+
+  padding: 1rem;
+
+  background-color: #e3f2fd;
+}
+
+
+/*
+  1rem = root font size
+
+  If html font-size is 16px:
+
+  1rem  = 16px
+  2rem  = 32px
+  20rem = 320px
+*/
+
+
+/* EM */
+
+.em-box {
+  font-size: 1.2em;
+
+  padding: 1em;
+
+  background-color: #fff3e0;
+}
+
+
+/*
+  EM is relative to the font-size
+  of the current context.
+*/
+
+
+/* VW and VH */
+
+.viewport-box {
+  width: 50vw;
+  min-height: 20vh;
+
+  padding: 1rem;
+
+  background-color: #f3e5f5;
+}
+
+
+/*
+  1vw = 1% of viewport width
+  1vh = 1% of viewport height
+*/
+
+
+/* =========================================
+   CSS FUNCTIONS
+   ========================================= */
+
+.function-demo {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 1rem;
+}
+
+
+/* calc() */
+
+.function-card:nth-child(1) {
+  width: calc(100% - 20px);
+
+  padding: 1rem;
+
+  background-color: #e8eaf6;
+}
+
+
+/* min() */
+
+.function-card:nth-child(2) {
+  width: min(100%, 300px);
+
+  padding: 1rem;
+
+  background-color: #e0f2f1;
+}
+
+
+/* max() */
+
+.function-card:nth-child(3) {
+  width: max(200px, 50%);
+
+  padding: 1rem;
+
+  background-color: #fce4ec;
+}
+
+
+/* clamp() */
+
+.function-card:nth-child(4) {
+  padding: 1rem;
+
+  background-color: #fff8e1;
+}
+
+.function-card h3 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
+
+/*
+  clamp(minimum, preferred, maximum)
+*/
+
+
+/* =========================================
+   TRANSITIONS
+   ========================================= */
+
+.transition-button {
+  padding: 1rem 2rem;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #333;
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.transition-button:hover {
+  background-color: #555;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   TRANSFORMS
+   ========================================= */
+
+.transform-demo {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 3rem;
+
+  padding: 3rem 1rem;
+}
+
+.transform-box {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  height: 120px;
+
+  background-color: #ddd;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* translate */
+
+.translate-box:hover {
+  transform: translate(20px, -10px);
+}
+
+
+/* scale */
+
+.scale-box:hover {
+  transform: scale(1.2);
+}
+
+
+/* rotate */
+
+.rotate-box:hover {
+  transform: rotate(15deg);
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+.animation-demo {
+  min-height: 150px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-box {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 100px;
+
+  background-color: #ddd;
+
+  animation: move-box 3s ease-in-out infinite alternate;
+}
+
+
+@keyframes move-box {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(150px);
+  }
+
+}
+
+
+/* =========================================
+   TEXT OVERFLOW
+   ========================================= */
+
+.text-overflow {
+  width: 300px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   WHITE SPACE
+   ========================================= */
+
+.nowrap {
+  white-space: nowrap;
+
+  overflow-x: auto;
+}
+
+
+/* =========================================
+   WORD BREAK
+   ========================================= */
+
+.word-break {
+  max-width: 300px;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 640px) {
+
+  .container {
+    padding: 1rem;
+  }
+
+  .percent-box,
+  .rem-box,
+  .viewport-box {
+    width: 100%;
+  }
+
+  .transform-demo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
