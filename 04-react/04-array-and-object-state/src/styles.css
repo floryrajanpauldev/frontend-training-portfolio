@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.5; }
+main { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+section { margin-bottom: 2rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+button { margin: 0.25rem; padding: 0.5rem 0.75rem; cursor: pointer; }
+li { margin-bottom: 0.25rem; }
