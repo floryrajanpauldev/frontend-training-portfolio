@@ -1,0 +1,36 @@
+/* Global styles */
+
+:root {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: green;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/*
+  These styles are intentionally global because
+  they are meant to apply across the application.
+*/
+
+.page {
+  padding: 20px;
+}
+
+.page-title {
+  color: red;
+  text-transform: capitalize;
+}
+
+.local-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
