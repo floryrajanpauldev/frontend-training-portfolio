@@ -1,0 +1,283 @@
+
+/* =========================================
+   CSS GRID PRACTICE
+   ========================================= */
+
+
+/* Universal selector */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   Page
+   ========================================= */
+
+body {
+  width: 90%;
+  margin: 0 auto;
+
+  font-family: Arial, sans-serif;
+
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  padding: 30px;
+  text-align: center;
+
+  background-color: #222;
+  color: white;
+}
+
+main {
+  margin-top: 40px;
+}
+
+section {
+  margin-bottom: 50px;
+  padding: 30px;
+
+  background-color: white;
+}
+
+section > h2 {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   BASIC GRID
+   ========================================= */
+
+.container {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+
+/* Grid items */
+
+.box {
+  padding: 20px;
+
+  border: 1px solid #ccc;
+
+  background-color: beige;
+}
+
+.box img {
+  max-width: 100%;
+  display: block;
+
+  margin-bottom: 15px;
+}
+
+.box h3 {
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   GRID ALIGNMENT
+   ========================================= */
+
+.container {
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+
+/*
+  Other values to practice:
+
+  justify-items: start;
+  justify-items: center;
+  justify-items: end;
+
+  align-items: start;
+  align-items: center;
+  align-items: end;
+*/
+
+
+/* =========================================
+   GRID CONTENT ALIGNMENT
+   ========================================= */
+
+.container {
+  justify-content: center;
+  align-content: center;
+}
+
+
+/* =========================================
+   GRID TEMPLATE AREAS
+   ========================================= */
+
+.area-container {
+  display: grid;
+
+  grid-template-columns: 3fr 1fr;
+
+  grid-template-rows: 100px 300px 100px;
+
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+
+  gap: 10px;
+
+  min-height: 500px;
+}
+
+.area-header {
+  grid-area: header;
+
+  padding: 20px;
+
+  background-color: lightblue;
+}
+
+.area-main {
+  grid-area: main;
+
+  padding: 20px;
+
+  background-color: lightgreen;
+}
+
+.area-aside {
+  grid-area: aside;
+
+  padding: 20px;
+
+  background-color: lightyellow;
+}
+
+.area-footer {
+  grid-area: footer;
+
+  padding: 20px;
+
+  background-color: lightgray;
+}
+
+
+/* =========================================
+   GRID ITEM POSITIONING
+   ========================================= */
+
+/*
+.box1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+*/
+
+
+/* Shorthand */
+
+/*
+.box2 {
+  grid-row: 1 / 4;
+  grid-column: 4 / 7;
+}
+*/
+
+
+/* grid-area shorthand */
+
+/*
+.box3 {
+  grid-area: 3 / 2 / 5 / 6;
+}
+*/
+
+
+/* =========================================
+   GRID OVERLAPPING
+   ========================================= */
+
+/*
+.box4 {
+  grid-area: 2 / 3 / 4 / 5;
+
+  background-color: blueviolet;
+
+  z-index: 1;
+}
+*/
+
+
+/* =========================================
+   AUTO-FIT + MINMAX
+   ========================================= */
+
+.subgrid-container {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   SUBGRID
+   ========================================= */
+
+.subgrid-box {
+  display: grid;
+
+  grid-template-rows: subgrid;
+
+  grid-row: span 3;
+
+  padding: 20px;
+
+  border: 1px solid #ccc;
+
+  background-color: #fafafa;
+}
+
+.subgrid-box img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .area-container {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+  }
+
+}

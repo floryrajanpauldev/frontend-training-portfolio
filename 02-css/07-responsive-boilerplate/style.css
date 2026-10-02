@@ -1,0 +1,212 @@
+
+/* =========================================
+   CSS RESET
+   ========================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   ROOT VARIABLES
+   ========================================= */
+
+:root {
+  /* Colors */
+  --color-black: #000;
+  --color-orange: orange;
+  --color-blue: blue;
+  --color-dark-blue: darkblue;
+
+  /* Font Sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xlg: 1.25rem;
+  --size-2xlg: 1.5rem;
+}
+
+
+/* =========================================
+   HTML
+   ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--color-black);
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo h1 {
+  font-size: var(--size-2xlg);
+  color: var(--color-dark-blue);
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+nav li {
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-blue);
+}
+
+header button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+
+/* =========================================
+   MAIN SECTIONS
+   ========================================= */
+
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: var(--size-2xlg);
+}
+
+section p {
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.card-container {
+  margin-top: 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media screen and (min-width: 768px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  nav li {
+    margin-bottom: 0;
+  }
+
+  header button {
+    margin-top: 0;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+
+}
+
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  section p {
+    font-size: var(--size-lg);
+  }
+
+}

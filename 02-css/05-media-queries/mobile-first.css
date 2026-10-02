@@ -1,0 +1,234 @@
+
+/* =========================================
+   MEDIA QUERIES
+   MOBILE-FIRST APPROACH
+   ========================================= */
+
+
+/* Universal selector */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   BASE STYLES - MOBILE
+   ========================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+
+/* Container */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.75rem;
+
+  border: 1px solid #ccc;
+}
+
+
+/* =========================================
+   HEADER - MOBILE
+   ========================================= */
+
+header {
+  display: block;
+  text-align: center;
+
+  background-color: #222;
+  color: white;
+}
+
+.logo {
+  margin-bottom: 15px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header button {
+  margin-top: 10px;
+  padding: 8px 16px;
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+main {
+  padding-top: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   MAX-WIDTH
+   500px AND BELOW
+   ========================================= */
+
+@media screen and (max-width: 500px) {
+
+  section h2 {
+    color: red;
+  }
+
+}
+
+
+/* =========================================
+   MIN-WIDTH
+   475px
+   ========================================= */
+
+@media screen and (min-width: 475px) {
+
+  .container {
+    max-width: 475px;
+  }
+
+}
+
+
+/* =========================================
+   MIN-WIDTH
+   640px
+   ========================================= */
+
+@media screen and (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+
+}
+
+
+/* =========================================
+   MIN-WIDTH
+   768px
+   ========================================= */
+
+@media screen and (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+
+}
+
+
+/* =========================================
+   MIN-WIDTH
+   1024px
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  header button {
+    margin-top: 0;
+  }
+
+}
+
+
+/* =========================================
+   MIN-WIDTH
+   1536px
+   ========================================= */
+
+@media screen and (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+
+}
+
+
+/* =========================================
+   ORIENTATION
+   ========================================= */
+
+@media screen and (min-width: 501px)
+       and (orientation: landscape) {
+
+  section {
+    min-height: 150px;
+  }
+
+}
+
+
+@media screen and (min-width: 501px)
+       and (orientation: portrait) {
+
+  section {
+    min-height: 200px;
+  }
+
+}
+
+
+/* =========================================
+   PRINT
+   ========================================= */
+
+@media print {
+
+  header,
+  footer {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+  }
+
+}
